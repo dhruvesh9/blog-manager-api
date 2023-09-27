@@ -1,10 +1,11 @@
 {
-  "name": "server",
+  "name": "blog-manager-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a Node.js Express REST API for managing blog posts. Blog posts are stored as individual files in a designated folder.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
