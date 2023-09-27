@@ -32,8 +32,6 @@ exports.getBlogPosts = (req, res) => {
 
                     blogPostData.id = file
 
-                    console.log(blogPostData);
-
                     // Create a BlogPost object
                     const blogPost = new BlogPost(blogPostData.id, blogPostData.title, blogPostData.content, blogPostData.author, blogPostData.publishDate, blogPostData.tags, blogPostData.imageUrl);
 
