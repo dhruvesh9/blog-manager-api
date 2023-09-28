@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose'); // Import Mongoose
-const bodyParser = require('body-parser');
 const app = express();
 const blogRoutes = require('./routes/blogRoutes');
 
