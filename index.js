@@ -1,10 +1,13 @@
 const express = require('express');
+var cors = require('cors')
 const mongoose = require('mongoose'); // Import Mongoose
 const app = express();
 const blogRoutes = require('./routes/blogRoutes');
 
 // Middleware
 app.use(express.json());
+
+app.use(cors());
 
 // Routes
 app.use('/api/blog', blogRoutes);
