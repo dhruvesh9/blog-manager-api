@@ -1,13 +1,28 @@
-// routes/blogRoutes.js
 const express = require('express');
 const router = express.Router();
-const blogController = require('../controllers/blogController');
+const {
+  createBlogPost,
+  getBlogPosts,
+  getBlogPostById,
+  updateBlogPostById,
+  deleteBlogPostById,
+} = require('../controllers/blogController');
 
-// Define routes
-router.get('/posts', blogController.getBlogPosts);
+// Create a new blog post
+router.post('/posts', createBlogPost);
 
-router.post('/posts',blogController.createBlogPost);
+// Read all blog posts
+router.get('/posts', getBlogPosts);
 
-router.delete('/posts/:id',blogController.deleteBlogPost);
+// Read a specific blog post by ID
+router.get('/posts/:id', getBlogPostById);
+
+// Update a blog post by ID (PUT or PATCH)
+router.put('/posts/:id', updateBlogPostById);
+// or
+router.patch('/posts/:id', updateBlogPostById);
+
+// Delete a blog post by ID
+router.delete('/posts/:id', deleteBlogPostById);
 
 module.exports = router;
